@@ -1,4 +1,4 @@
-private ['_map'];
+private ["_map"];
 disableSerialization;
 
 _map = ((findDisplay 12) displayCtrl 51);
