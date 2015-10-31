@@ -18,12 +18,11 @@ _defaultIcon = switch (side player) do {
 };
 
 if (BG_BFT_onlyPlayer) then {
-  _players = allPlayers;
   {
     if (!((group _x) in _groups) && side _x == side player) then {
-      _icon = group _x getVariable ['BG_BFT_icon',_defaultIcon];
-      _text = group _x getVariable ['BG_BFT_groupId', groupId _x];
       _groups pushBack group _x;
+      _icon = group _x getVariable ['BG_BFT_icon', _defaultIcon];
+      _text = group _x getVariable ['BG_BFT_groupId', groupId _x];
       _iconType = (BG_BFT_iconTypes select 0) find _icon;
       if (_iconType>=0) then {
         _iconType = (BG_BFT_iconTypes select 1) select _iconType;
@@ -42,11 +41,12 @@ if (BG_BFT_onlyPlayer) then {
         ];
       };
     };
-  } forEach _players;
+    true;
+  } count allPlayers;
 } else {
   {
     if (side _x == side player) then {
-      _icon = _x getVariable ['BG_BFT_icon',_defaultIcon];
+      _icon = _x getVariable ['BG_BFT_icon', _defaultIcon];
       _text = _x getVariable ['BG_BFT_groupId', groupId _x];
       _iconType = (BG_BFT_iconTypes select 0) find _icon;
       if (_iconType>=0) then {
@@ -66,7 +66,8 @@ if (BG_BFT_onlyPlayer) then {
         ];
       };
     };
-  } forEach allGroups;
+    true;
+  } count allGroups;
 };
 
 BG_BFT_Icons = _icons;
