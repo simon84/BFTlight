@@ -40,16 +40,41 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
+				items=4;
 				class Item0
 				{
-					position[]={2090.7981,6.73,5614.1582};
+					position[]={2034.9374,4.7718444,5417.5498};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
-					player="PLAYER COMMANDER";
 					leader=1;
-					skill=0.60000002;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={2039.9374,4.7612181,5412.5498};
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={2029.9374,4.7369008,5412.5498};
+					id=2;
+					side="WEST";
+					vehicle="B_soldier_GL_F";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={2044.9374,4.7653131,5407.5498};
+					id=3;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					skill=0.40000001;
 				};
 			};
 		};
@@ -61,8 +86,8 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={2034.9374,4.7718444,5417.5498};
-					id=1;
+					position[]={1825.303,5.5,5647.4731};
+					id=4;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
 					leader=1;
@@ -71,8 +96,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={2039.9374,4.7612181,5412.5498};
-					id=2;
+					position[]={1830.303,5.5,5642.4731};
+					id=5;
 					side="WEST";
 					vehicle="B_Soldier_AR_F";
 					rank="CORPORAL";
@@ -80,16 +105,16 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2029.9374,4.7369008,5412.5498};
-					id=3;
+					position[]={1820.303,5.5,5642.4731};
+					id=6;
 					side="WEST";
 					vehicle="B_soldier_GL_F";
 					skill=0.40000001;
 				};
 				class Item3
 				{
-					position[]={2044.9374,4.7653131,5407.5498};
-					id=4;
+					position[]={1835.303,5.5,5637.4731};
+					id=7;
 					side="WEST";
 					vehicle="B_soldier_LAT_F";
 					skill=0.40000001;
@@ -104,8 +129,8 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={1825.303,5.5,5647.4731};
-					id=5;
+					position[]={1982.3665,5.8457484,5813.7344};
+					id=8;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
 					leader=1;
@@ -114,8 +139,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1830.303,5.5,5642.4731};
-					id=6;
+					position[]={1987.3665,5.9546652,5808.7344};
+					id=9;
 					side="WEST";
 					vehicle="B_Soldier_AR_F";
 					rank="CORPORAL";
@@ -123,16 +148,16 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1820.303,5.5,5642.4731};
-					id=7;
+					position[]={1977.3665,5.7289166,5808.7344};
+					id=10;
 					side="WEST";
 					vehicle="B_soldier_GL_F";
 					skill=0.40000001;
 				};
 				class Item3
 				{
-					position[]={1835.303,5.5,5637.4731};
-					id=8;
+					position[]={1992.3665,6.0299034,5803.7344};
+					id=11;
 					side="WEST";
 					vehicle="B_soldier_LAT_F";
 					skill=0.40000001;
@@ -144,41 +169,26 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=4;
+				items=2;
 				class Item0
 				{
-					position[]={1982.3665,5.8457484,5813.7344};
-					id=9;
+					position[]={2093.5708,6.73,5607.8618};
+					id=12;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.5;
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
 				};
 				class Item1
 				{
-					position[]={1987.3665,5.9546652,5808.7344};
-					id=10;
+					position[]={2090.7981,6.73,5614.1582};
+					id=13;
 					side="WEST";
-					vehicle="B_Soldier_AR_F";
-					rank="CORPORAL";
-					skill=0.44999999;
-				};
-				class Item2
-				{
-					position[]={1977.3665,5.7289166,5808.7344};
-					id=11;
-					side="WEST";
-					vehicle="B_soldier_GL_F";
-					skill=0.40000001;
-				};
-				class Item3
-				{
-					position[]={1992.3665,6.0299034,5803.7344};
-					id=12;
-					side="WEST";
-					vehicle="B_soldier_LAT_F";
-					skill=0.40000001;
+					vehicle="B_Soldier_TL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
 				};
 			};
 		};

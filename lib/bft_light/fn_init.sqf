@@ -1,9 +1,6 @@
 if (!hasInterface) exitWith {};
 
-diag_log "BG_BFT_INIT started";
-
 BG_BFT_Icons = [];
-BG_BFT_drawEventId = -1;
 BG_BFT_onlyPlayer = false;
 
 BG_BFT_iconTypes=[];
@@ -12,7 +9,7 @@ private ["_keys","_values","_classes","_side"];
 _keys = [];
 _values = [];
 
-_classes = "getText (_x >> 'markerClass') == 'NATO_BLUFOR' ||   getText (_x >> 'markerClass') == 'NATO_OPFOR' ||   getText (_x >> 'markerClass') == 'NATO_Independent'" configClasses (configfile >> "CfgMarkers");
+_classes = "getText (_x >> 'markerClass') in ['NATO_BLUFOR', 'NATO_OPFOR', 'NATO_Independent']" configClasses (configfile >> "CfgMarkers");
 {
     _keys pushBack configName _x;
     _values pushBack [
@@ -35,12 +32,13 @@ _classes = "getText (_x >> 'markerClass') == 'NATO_BLUFOR' ||   getText (_x >> '
 
 BG_BFT_iconTypes = [_keys,_values];
 
-
-[] call BG_fnc_bftdialog;
-((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw",BG_fnc_drawEvent];
 [{
     [] call BG_fnc_iconUpdateLoop;
 }, 10, []] call CBA_fnc_addPerFrameHandler;
 [] call BG_fnc_iconUpdateLoop;
 
-diag_log "BG_BFT_INIT stopped";
+[] spawn {
+    waitUntil {!isNull ((findDisplay 12) displayCtrl 51)};
+    [] call BG_fnc_bftdialog;
+    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw",BG_fnc_drawEvent];
+};

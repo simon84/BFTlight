@@ -1,5 +1,5 @@
 disableSerialization;
-private ["_map","_ctrl","_tmp","_btn"];
+private ["_map","_ctrl","_gY","_gX","_gY0","_gX0"];
 
 with uiNamespace do {
     _gY = ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
